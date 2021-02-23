@@ -8,7 +8,9 @@ async function convertInterview(filePath: string): Promise<void> {
   // load CSV
   // const file = await readFileSync(filePath)
   const today = moment()
-  csv()
+  csv({
+    headers: ['Timestamp', 'Name', 'Twitter', 'LinkedIn', 'Journey', 'BestBug', 'Advice', 'Winning', 'Grow', 'Differently'],
+  })
   .fromFile(filePath)
   .then(
     // eslint-disable-next-line no-console
